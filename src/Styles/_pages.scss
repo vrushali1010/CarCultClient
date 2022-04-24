@@ -1,0 +1,252 @@
+//------------------------------------- Navbar -------------------------------------
+.navbar {
+  @extend .df-ac-jc;
+  width: 100vw;
+  position: absolute;
+  top: 1.5rem;
+  .nav-box {
+    @extend .df-ac-jb;
+    @include card-style(1rem);
+    width: 85%;
+    padding: 1.75rem;
+  }
+  .btns {
+    .navbar__signup {
+      @include button-style();
+    }
+    .navbar__login {
+      @include button-style();
+      margin-left: 2rem;
+    }
+  }
+  .feedback {
+    @extend .dfc-ac-js;
+    min-width: 45rem;
+    padding: 1.25rem;
+    .remark {
+      width: 5rem;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #0085ff;
+    }
+    .feeback-submit {
+      @include button-style();
+      margin-top: 1rem;
+    }
+  }
+}
+
+//------------------------------------- Landing page -------------------------------------
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  padding-top: 12.5rem;
+  .landing-page__sec-1 {
+    @extend .df-as-jb;
+    width: 85%;
+    height: 100%;
+    margin: auto;
+    .sec-1__column-1 {
+      @extend .dfc;
+      width: 25rem;
+      .sec-1__heading {
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 4.5rem;
+        color: #ffffff;
+        margin-bottom: 2rem;
+      }
+      .buying-selling-options {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+      }
+    }
+  }
+}
+
+//------------------------------------- Signup page -------------------------------------
+
+.signup-page {
+  @extend .df-ac-jc;
+  background: linear-gradient(90deg, #0085ff 0%, #0f2b3e 99.99%, #a5cfed 100%);
+  height: 100vh;
+  width: 100vw;
+  .signup-page__col-1 {
+    @extend .dfc-ac-jc;
+    width: 50%;
+    height: 100%;
+    .col-1__btn {
+      background-color: #fff;
+      border-radius: 0.5rem;
+      color: #0085ff;
+      padding: 0.75rem;
+      margin-top: 2rem;
+      width: 20rem;
+      font-size: 1.5rem;
+    }
+  }
+  .signup-page__col-2 {
+    @extend .dfc-ac-jc;
+    width: 50%;
+    height: 100%;
+    background: #fff;
+    .sign-up__form {
+      @extend .dfc, .je;
+      padding: 3rem;
+      border-radius: 0.5rem;
+      box-shadow: var(--box-shadow);
+      width: 60%;
+      height: 70%;
+      .sign-up__form-heading {
+        font-weight: bold;
+        font-size: 3rem;
+        line-height: 4rem;
+        letter-spacing: 0.15em;
+        color: #4f4f4f;
+      }
+      .sign-up__form-sub-heading {
+        font-size: 2rem;
+        color: rgba(79, 79, 79, 0.8);
+      }
+    }
+  }
+  .forget-pass {
+    text-align: start;
+    text-decoration: underline;
+  }
+}
+
+//------------------------------------- Sell Car -------------------------------------
+
+.sell-car {
+  @extend .dfc-ac-jc;
+  height: 100vh;
+  .sell-car__heading {
+    font-size: 2rem;
+    color: #fff;
+  }
+  form {
+    @extend .df-as-jb;
+    @include card-style(0.5rem);
+    gap: 2rem;
+    padding: 2rem;
+    width: 40rem;
+    .sell-car__sell-btn {
+      @include button-style();
+    }
+  }
+}
+
+//------------------------------------- Products Page -------------------------------------
+
+.products-page {
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  grid-template-rows: 4rem auto;
+  gap: 1rem;
+  padding: 2rem;
+  .products-page__nav {
+    @extend .df-ac-jb;
+    @include card-style(1rem);
+    grid-column-end: span 2;
+    padding: 0 2rem;
+    .product-page__search {
+      @extend .df-ac-js;
+      background: #a3cfee;
+      border: 1px solid #4f4f4f4a;
+      padding-left: 0.25rem;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      input {
+        outline: none;
+        border: none;
+        padding: 0.25rem;
+        color: #4f4f4f;
+        margin-right: -1px;
+        margin-left: 0.25rem;
+      }
+    }
+  }
+  .products-page__products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .products-page__filter {
+    @extend .dfc;
+    @include card-style(1rem);
+    padding: 1rem;
+    min-width: 16rem;
+    height: fit-content;
+    .rbt-menu {
+      width: 16rem !important;
+      inset: 0.75rem auto auto -0.75rem !important;
+    }
+  }
+}
+
+.product-popup {
+  max-width: 30rem;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+//------------------------------------- Profile Page -------------------------------------
+
+.profile-info {
+  @extend .df-ac-jc;
+  height: 100vh;
+  .profile-info__card {
+    @include card-style(0.5rem);
+    @extend .dfc-ac;
+    width: 20rem;
+    height: 13rem;
+    padding: 2rem;
+    .profile-icon {
+      @include card-style(50%);
+      background: #8064a2;
+      padding: 0.5rem;
+      color: #fff;
+      font-size: 2.5rem !important;
+    }
+    button {
+      @include button-style();
+    }
+  }
+}
+
+//------------------------------------- Cart Page -------------------------------------
+
+.cart-page {
+  @extend .dfc-ac-jc;
+  .cart-page__heading {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+  }
+  .cart-page__cart-items {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 2rem;
+  }
+}
+
+//------------------------------------- Favourite Page -------------------------------------
+
+.favourite-page {
+  @extend .dfc-ac-jc;
+  .favourite-page__heading {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+  }
+  .favourite-page__favourite-items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 1rem;
+    padding: 2rem;
+  }
+}

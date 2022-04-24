@@ -1,0 +1,96 @@
+.product-card {
+  @extend .dfc-as;
+  @include card-style(0.5rem);
+  position: relative;
+  overflow: hidden;
+  padding: 0.5rem;
+  width: 22rem;
+  height: fit-content;
+  .sold-txt {
+    text-align: center;
+    position: absolute;
+    color: white;
+    font-weight: 600;
+    right: -20px;
+    top: 6px;
+    transform: rotate(45deg);
+    background: red;
+    width: 20%;
+  }
+  .product-img {
+    position: relative;
+    width: 100%;
+    svg {
+      position: absolute;
+      right: 0;
+    }
+  }
+  hr {
+    background: #000;
+    width: 100%;
+    height: 1px;
+    border: none;
+  }
+  .card-info__col-1 {
+    //border-right: 1px solid #000;
+    padding-right: 0.25rem;
+    margin-right: 0.25rem;
+  }
+  .buy-popup {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 40rem;
+    strong,
+    button {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+    }
+    button {
+      background: #939393;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      &:hover {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+}
+
+.goback {
+  position: absolute;
+  top: 2.25rem;
+  left: 5.25rem;
+  font-weight: 500;
+  width: 10rem;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  color: rgba(0, 0, 0, 0.6);
+  .goback__txt {
+    text-decoration: none;
+    color: #fff;
+    &:active {
+      color: #939393;
+    }
+  }
+}
+
+.popup {
+  @extend .df-ac-jc;
+  position: fixed;
+  background: rgba($color: #000000, $alpha: 0.4);
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  .popup__window {
+    @include cardMixin(#fff);
+    @extend .dfc;
+  }
+}
